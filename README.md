@@ -1,12 +1,28 @@
-- 👋 Hi, I’m @Deepakc766
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+#include<iostream>
+using namespace std;
+#include<vector>
+int main(int argc, char const *argv[])
+{
+    
+vector<vector<int> >v={
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12},
+    {13, 14, 15, 16},
+    {17, 18, 19, 20}
+};
 
-<!---
-Deepakc766/Deepakc766 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+int row=v.size();
+int col=v[0].size();
+for(int j=0;j<col;j++){
+    for(int i=0;i<row;i++){
+        if(j%2==0){
+            cout<<v[i][j]<<" ";
+        }else{
+            cout<<v[row-i-1][j]<<" ";
+        }
+    }
+}
+
+    return 0;
+}
